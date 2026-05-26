@@ -140,8 +140,12 @@ motto: "遇事不决，可问春风"
 ## 📝 最近博客
 
 <!-- 下面这块由 GitHub Actions 每 6 小时自动从 https://blog.june-pj.cn/atom.xml 同步 -->
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [Docker 容器化 aTrust 绕过企业 DLP 管控方案](https://blog.june-pj.cn/posts/b8f3d721/) <sub>📅 
+Date</sub>- [Butterfly 404页面美化](https://blog.june-pj.cn/posts/15a35a53/) <sub>📅 
+Date</sub>- [Butterfly首页轮播图Swiper（源码版）](https://blog.june-pj.cn/posts/811bada5/) <sub>📅 
+Date</sub>- [DataX 同步 StarRocks VARCHAR 超长导致数据丢失](https://blog.june-pj.cn/posts/c7d2e519/) <sub>📅 
+Date</sub>- [GraalVM 反射参数名丢失导致 Controller 500](https://blog.june-pj.cn/posts/a3e8f142/) <sub>📅 
+Date</sub><!-- BLOG-POST-LIST:END -->
 
 <p align="right"><a href="https://blog.june-pj.cn/archives/">📚 全部归档 →</a></p>
 
