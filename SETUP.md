@@ -41,10 +41,22 @@ git push -u origin main
 
 | Workflow | 作用 | 频率 |
 |---|---|---|
-| `Latest blog post workflow` | 同步 atom.xml 最近 5 篇到 README | 每 6 小时 |
-| `Generate Snake` | 生成贪吃蛇 SVG 推到 `output` 分支 | 每天 0 点（UTC）|
+| `Latest blog post workflow` | 同步 atom.xml 最近 5 篇到 README（main 分支） | 每 6 小时 |
+| `Generate README Assets` | 在 GitHub 美国机房预生成所有 SVG 资源到 `output` 分支 | 每天 0 点（UTC）|
 
-第一次跑 `Generate Snake` 后，仓库会多一个 `output` 分支，里面有 `github-snake.svg` 和 `github-snake-dark.svg`，README 直接引用这两个文件。**没跑之前贪吃蛇位置会显示破图，正常现象。**
+### 为什么要 `Generate README Assets`
+
+`*.vercel.app` 在国内**根本访问不通**（HTTP 000，TCP 连接被重置）。GitHub README 上的图虽然走 camo 代理，但 camo 缓存不稳，国内访客经常看到破图。
+
+解决方案：让 GitHub Action runner（位于美国机房，访问 vercel 没问题）每天预先把数据卡 / 贪吃蛇等 SVG 下载好，推到 `output` 分支。README 通过 `raw.githubusercontent.com` 引用 → 国内访问稳定。
+
+第一次跑 `Generate README Assets` 后，仓库会多一个 `output` 分支，里面有：
+
+- `stats.svg` / `stats-dark.svg`
+- `top-langs.svg` / `top-langs-dark.svg`
+- `github-snake.svg` / `github-snake-dark.svg`
+
+**没跑之前所有数据卡 + 贪吃蛇都会破图，正常现象。**
 
 ## 四、设计取舍
 
@@ -79,18 +91,21 @@ git push -u origin main
 
 `### 技术栈` 那一段是纯文字 inline code（`` `Java` ``）。需要改技术名直接改文字，不用碰图标 / 颜色。
 
-### 数据卡配色
+### 数据卡 / 贪吃蛇配色
 
-两个 `<picture>` 块都做了双主题，参数：
+所有 SVG 资源都在 `.github/workflows/generate-assets.yml` 里生成。配色按双主题区分：
 
-| 参数 | 浅色 | 深色 |
+| 资源 | 浅色 | 深色 |
 |---|---|---|
-| 强调色 / icon | `E68282` | `F2B94B` |
-| 文字色 | `475569` | `C4C4D0` |
+| stats / top-langs 强调色 | `E68282` | `F2B94B` |
+| stats / top-langs 文字色 | `475569` | `C4C4D0` |
 | 背景 | `00000000`（透明） | `00000000`（透明） |
-| 标题 | `hide_title=true` | `hide_title=true` |
+| 贪吃蛇蛇身 | `#E68282` | `#F2B94B` |
+| 贪吃蛇格子（0~4） | `#E5E7EB → #D86060` | `#2E2E36 → #F2B94B` |
 
-GitHub 按访客系统主题自动切换。
+GitHub 按访客系统主题自动加载对应文件（`*-dark.svg` 用 `prefers-color-scheme: dark`）。
+
+**注意：贪吃蛇颜色参数必须带 `#` 前缀（按 [Platane/snk 官方文档](https://github.com/Platane/snk) 字面量用 `#`，不是 `%23`），否则解析失败 fallback 成黑色。**
 
 ### 博客同步频率
 
@@ -114,20 +129,17 @@ GitHub 按访客系统主题自动切换。
 
 Settings → Actions → General → **Workflow permissions** 改为 `Read and write permissions`，重跑 workflow。
 
-### Stats 数据卡破图（502）
+### Stats 数据卡破图
 
-`github-readme-stats.vercel.app` 部署在 Vercel 免费额度上，被 GitHub IP 限流时会 502。已经在 URL 加了 `cache_seconds=14400`，第一次成功加载后 4 小时内都从 GitHub 自己的 camo CDN 取，不会重新打 vercel。如果第一次加载就破图，等几分钟刷新通常会好。如果长期破图，可以考虑自己 fork 一份 [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) 部署到自己的 Vercel 账号。
+第一次跑 `Generate README Assets` 之前，所有数据卡都是破图，正常。Actions 页手动触发一次。
 
-### 贪吃蛇位置破图
+如果跑过之后还是破图，去 `output` 分支看看 `stats.svg` 是否存在。不存在的话看 Action 日志，多半是 vercel 在间歇 502，重跑一次 workflow 通常就好。
 
-`Generate Snake` 还没跑过，`output` 分支不存在。Actions 页手动触发一次，等 30 秒刷新。
+### 贪吃蛇位置破图 / 全黑
 
-### 贪吃蛇配色
+破图：`Generate README Assets` 没跑过，`output` 分支不存在。Actions 页手动触发一次。
 
-`.github/workflows/snake.yml` 里 `color_snake` 是蛇身颜色，`color_dots` 是 0~4 级贡献格子（从空到最满）。当前配色：
-
-- 浅色：蛇 `E68282`，格子从浅到深 `E5E7EB → F8C5C5 → EFA5A5 → E68282 → D86060`
-- 深色：蛇 `F2B94B`，格子从浅到深 `2E2E36 → 5E4F2A → 8A7330 → B89640 → F2B94B`
+全黑：颜色参数没加 `#` 前缀。打开 `.github/workflows/generate-assets.yml`，确认 `color_snake=#E68282` 写法（带井号）。
 
 ### 打字机不动 / 显示乱码
 
