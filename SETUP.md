@@ -46,11 +46,18 @@ git push -u origin main
 
 ### 为什么要 `Generate README Assets`
 
-`*.vercel.app` 在国内**根本访问不通**（HTTP 000，TCP 连接被重置）。GitHub README 上的图虽然走 camo 代理，但 camo 缓存不稳，国内访客经常看到破图。
+`*.vercel.app` 在国内**根本访问不通**（HTTP 000，TCP 连接被重置）。GitHub README 上的图虽然走 camo 代理，但 camo 缓存不稳，国内访客经常看到破图。即使在 GitHub Action runner（美国机房）上 curl `github-readme-stats.vercel.app` 也会拿到 503——这个免费实例长期被 GitHub IP 限流。
 
-解决方案：让 GitHub Action runner（位于美国机房，访问 vercel 没问题）每天预先把数据卡 / 贪吃蛇等 SVG 下载好，推到 `output` 分支。README 通过 `raw.githubusercontent.com` 引用 → 国内访问稳定。
+解决方案：
 
-第一次跑 `Generate README Assets` 后，仓库会多一个 `output` 分支，里面有：
+| 资源 | 生成方式 |
+|---|---|
+| stats.svg / top-langs.svg | Python 脚本直接调 GitHub GraphQL API 自己拼 SVG，**完全脱离 vercel** |
+| github-snake.svg | `Platane/snk` 官方 action（不依赖 vercel） |
+
+所有资源推到 `output` 分支，README 通过 `raw.githubusercontent.com` 引用 → 国内访问稳定。
+
+第一次跑 `Generate README Assets` 后，`output` 分支会有 6 个 SVG：
 
 - `stats.svg` / `stats-dark.svg`
 - `top-langs.svg` / `top-langs-dark.svg`
@@ -131,9 +138,15 @@ Settings → Actions → General → **Workflow permissions** 改为 `Read and w
 
 ### Stats 数据卡破图
 
-第一次跑 `Generate README Assets` 之前，所有数据卡都是破图，正常。Actions 页手动触发一次。
+**老问题**：早先用 `github-readme-stats.vercel.app` 直引，国内 TCP 不通；让 runner 去 curl 也是 503（免费实例被限流）。
 
-如果跑过之后还是破图，去 `output` 分支看看 `stats.svg` 是否存在。不存在的话看 Action 日志，多半是 vercel 在间歇 502，重跑一次 workflow 通常就好。
+**当前方案**：runner 用 Python 脚本 `.github/scripts/generate_stats.py` 直接调 GitHub GraphQL API 自己拼 SVG。
+
+如果数据卡还是破图：
+
+1. 检查 `Generate README Assets` 是不是没跑过 → Actions 页手动触发
+2. 检查 `output` 分支里 `stats.svg` 是不是存在 → 不存在看 Action 日志，多半是 GraphQL 查询失败（看 step "Generate stats SVGs" 输出）
+3. 改 SVG 样式 → 直接编辑 `.github/scripts/generate_stats.py` 里的 `render_stats` / `render_langs` 函数
 
 ### 贪吃蛇位置破图 / 全黑
 

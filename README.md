@@ -53,13 +53,13 @@
 <a href="https://github.com/June-PJ">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/June-PJ/June-PJ/output/stats-dark.svg" />
-  <img height="160" alt="June's GitHub stats" src="https://raw.githubusercontent.com/June-PJ/June-PJ/output/stats.svg" />
+  <img alt="June's GitHub stats" src="https://raw.githubusercontent.com/June-PJ/June-PJ/output/stats.svg" />
 </picture>
 </a>
 <a href="https://github.com/June-PJ">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/June-PJ/June-PJ/output/top-langs-dark.svg" />
-  <img height="160" alt="Top languages" src="https://raw.githubusercontent.com/June-PJ/June-PJ/output/top-langs.svg" />
+  <img alt="Top languages" src="https://raw.githubusercontent.com/June-PJ/June-PJ/output/top-langs.svg" />
 </picture>
 </a>
 
