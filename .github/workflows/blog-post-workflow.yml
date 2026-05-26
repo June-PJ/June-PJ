@@ -1,20 +1,14 @@
 name: Latest blog post workflow
 
-# 每 6 小时跑一次，把 https://blog.june-pj.cn/atom.xml 的最新 5 篇文章
-# 自动注入到 README.md 的 <!-- BLOG-POST-LIST --> 区块。
-# 也可以在 Actions 页面手动触发（workflow_dispatch）。
+# 每 6 小时把 https://blog.june-pj.cn/atom.xml 的最新 5 篇文章
+# 注入到 README.md 的 <!-- BLOG-POST-LIST --> 区块。
+# 也可在 Actions 页面手动触发（workflow_dispatch）。
 
 on:
   schedule:
-    # cron 时区为 UTC，0 分整点每 6 小时执行
+    # cron 时区为 UTC，每 6 小时整点执行
     - cron: "0 */6 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/blog-post-workflow.yml
-      - README.md
 
 permissions:
   contents: write
@@ -32,8 +26,7 @@ jobs:
         with:
           feed_list: "https://blog.june-pj.cn/atom.xml"
           max_post_count: 5
-          # 每行格式：- [标题](链接) <sub>📅 发布日期</sub>
-          template: "- [$title]($url) <sub>📅 $newlineDate</sub>"
+          # 每行格式：- `日期` · [标题](链接)
+          template: "- `$date` · [$title]($url)"
           date_format: "yyyy-MM-dd"
-          # commit 信息
           commit_message: "chore: update latest blog posts"

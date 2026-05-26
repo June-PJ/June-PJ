@@ -1,28 +1,24 @@
 # GitHub Profile README · 部署说明
 
-这套文件是给你 GitHub 资料页（`https://github.com/June-PJ`）做的展示 README。
+这套文件展示在 https://github.com/June-PJ 的资料页顶部。
 
 ## 一、建仓库
 
-GitHub 的"个人介绍 README"约定：**仓库名必须与你的用户名完全一致**。
-
-你的用户名是 `June-PJ`，所以新建一个名为 `June-PJ` 的公开仓库：
+GitHub "Profile README" 的硬性约定：**仓库名必须与用户名完全一致**。
 
 1. 浏览器打开 https://github.com/new
-2. **Repository name** 填 `June-PJ`（必须严格一致，区分大小写）
+2. **Repository name** 填 `June-PJ`（严格一致，区分大小写）
 3. **Public** 公开
-4. **不要勾选** "Add a README"（我们用本目录下的 README.md）
+4. **不要勾选** "Add a README"（用本目录下的 README.md）
 5. 点 Create repository
 
-GitHub 创建后会提示"You found a secret!"或类似文案，告诉你这是 profile README 仓库。
+建完之后 GitHub 会提示这是 profile 仓库（"You found a secret"）。
 
 ## 二、推上去
 
-把当前目录（`githubProfile/`）的内容搬出博客仓库 → 推到刚建的仓库。
+在当前目录（`d:\MyCode\June-PJ`）执行：
 
 ```cmd
-move d:\MyCode\JuneBlog\githubProfile d:\MyCode\June-PJ
-cd /d d:\MyCode\June-PJ
 git init
 git branch -M main
 git add .
@@ -31,86 +27,92 @@ git remote add origin https://github.com/June-PJ/June-PJ.git
 git push -u origin main
 ```
 
-推上去后访问 https://github.com/June-PJ ，README 会显示在头像下方。
+推完访问 https://github.com/June-PJ ，README 会出现在头像下方。
 
 ## 三、激活博客同步 Actions
 
 仓库 → **Settings** → **Actions** → **General**：
 
 1. **Actions permissions**：选 `Allow all actions and reusable workflows`
-2. **Workflow permissions**：选 `Read and write permissions`（让 Action 能 commit README）
+2. **Workflow permissions**：选 **Read and write permissions**（必须，否则 Action 无法 commit README，会报 403）
 3. 保存
 
 然后去 **Actions** 标签页：
 
 1. 找到 `Latest blog post workflow`
-2. 点 `Run workflow` → `Run workflow` 手动触发一次
-3. 等 30 秒左右刷新 README，应该能看到最近 5 篇博客文章
+2. 右上角 `Run workflow` → `Run workflow` 手动触发一次
+3. 等 30 秒，刷新 README 应该能看到最近 5 篇博客
 
-之后这个 workflow 会每 6 小时自动跑一次，博客发新文章后最迟 6 小时同步过来。
+之后会每 6 小时自动跑一次，新文章发布后最迟 6 小时同步过来。
 
 ## 四、自定义
 
-### 文案 / 简介
+### 简介文案
 
-`README.md` 顶部 `## 🌱 关于我` 那个 yaml 风格代码块就是简介，直接改文字就行。
+`README.md` 里 `## 关于` 那一段一句话简介，直接改文字。
 
-### 打字机标题
+### 打字机文案
 
-第一行的 `<picture>` 块，里面 `lines=...` 参数是分号分隔的多句话。需要改的话先 URL 编码（中文要 `encodeURIComponent`）：
+`README.md` 顶部的 `<picture>`，`lines=...` 是分号分隔的多句话，需要 URL 编码。**只用英文/数字**，中文很容易把 SVG 渲染服务搞炸。
 
-- 想改文案 → 用 https://www.urlencoder.org/ 编码后替换 `lines=` 参数
-- 想改速度 → `duration=2800`（毫秒，每个字符停留时间）
-- 想改颜色 → `color=...`（深色版 `F2B94B`，浅色版 `E68282`）
+- 改文案 → 用 https://www.urlencoder.org/ 编码后替换 `lines=` 参数
+- 改速度 → `duration=2800`（毫秒）
+- 改颜色 → 浅色 `E68282`（珊瑚红）/ 深色 `F2B94B`（琥珀黄）
 
 ### 技术栈徽章
 
-shields.io 风格：`https://img.shields.io/badge/<显示文字>-<颜色>?style=for-the-badge&logo=<图标名>&logoColor=white`
+shields.io 风格统一 `flat-square`。模板：
 
-图标名查 https://simpleicons.org/ ，颜色我已经统一为：
-- 主红色 `E68282`：核心语言
-- 黄色 `F2B94B`：后端框架
-- 灰色 `99A9BF`：前端 / 博客
-- 中性灰 `858585`：工具
+```
+https://img.shields.io/badge/<显示文字>-<颜色>?style=flat-square&logo=<图标名>&logoColor=white
+```
 
-### 博客同步频率
+- 图标名查 https://simpleicons.org/
+- 主组色 `475569`（深灰，对齐 Butterfly 主文字色）
+- 次组色 `94A3B8`（浅灰）
+- 主组放核心技术，次组放周边工具，两组之间用 `&nbsp;` 视觉隔开
 
-`.github/workflows/blog-post-workflow.yml` 里的 `cron: "0 */6 * * *"`：
+### 数据卡配色
 
-- `0 */6 * * *` 每 6 小时
-- `0 */3 * * *` 每 3 小时
-- `0 0 * * *`   每天 0 点
-- `*/30 * * * *` 每 30 分钟（不建议，没必要）
+所有 `<picture>` 块都做了双主题，URL 参数：
 
-### 数据卡片配色
+| 参数 | 浅色 | 深色 |
+|---|---|---|
+| 强调色 / icon | `E68282` | `F2B94B` |
+| 文字色 | `475569` | `C4C4D0` |
+| 背景 | `00000000`（透明） | `00000000`（透明） |
+| 标题 | `hide_title=true` | `hide_title=true` |
 
-`README.md` 里所有 `<picture>` 块的 URL 参数都已对齐你 junePortal 的双主题：
+GitHub 会按访客系统主题自动选版本，无需额外配置。
 
-- 浅色：`E68282` 珊瑚红
-- 深色：`F2B94B` 琥珀黄
+### 同步频率
 
-GitHub 会读用户的主题设置，自动展示对应版本。
+`.github/workflows/blog-post-workflow.yml` 里的 cron：
+
+| 表达式 | 频率 |
+|---|---|
+| `0 */6 * * *` | 每 6 小时（默认） |
+| `0 */3 * * *` | 每 3 小时 |
+| `0 0 * * *` | 每天 0 点（UTC） |
 
 ## 五、常见问题
 
-### Q: 推上去之后 README 不显示？
+### README 不显示
 
-仓库名必须**严格等于** `June-PJ`。如果建错了名字，删掉重建，或在 Settings → General → Repository name 改名。
+仓库名必须**严格等于** `June-PJ`。建错的话去 Settings → General → Repository name 改名，或者删掉重建。
 
-### Q: 博客同步 Actions 报 403 / 写不进去？
+### Action 报 403 / 写不进 README
 
-Settings → Actions → General → **Workflow permissions** 改为 `Read and write permissions`。
+Settings → Actions → General → **Workflow permissions** 改为 `Read and write permissions`，然后重跑一次 workflow。
 
-### Q: 打字机 / 数据卡显示破图？
+### Stats 数据卡破图
 
-这些第三方服务（demolab.com / vercel.app）偶尔抽风，等几分钟刷新通常就好。如果某个服务长期挂掉，告诉我换其他服务。
+`github-readme-stats.vercel.app` 偶尔抽风，等几分钟刷新通常会好。如果某条卡片长期 502，把它的 `<picture>` 块临时注释掉。
 
-### Q: 想加更多模块？
+### 打字机不动 / 显示乱码
 
-常见可选项：
-- **GitHub Trophies**：奖杯墙 https://github.com/ryo-ma/github-profile-trophy
-- **WakaTime 编码统计**：每周写代码时长 https://wakatime.com/
-- **Spotify 现在播放**：实时显示在听什么 https://github.com/JeffreyCA/spotify-now-playing-readme
-- **贡献蛇**：吃格子动画 https://github.com/Platane/snk
+`readme-typing-svg.demolab.com` 对中文 URL 编码兼容很差，**只放英文/数字**。中文留给下面的"关于"段落。
 
-需要的话告诉我加哪个，我直接给你接进来。
+### 想加 streak / activity-graph？
+
+不建议。它们占大版面、信息密度低、还经常破图。这一版有意去掉了。如果真的想加，把对应 `<picture>` 块加回 `## GitHub 数据` 即可。
