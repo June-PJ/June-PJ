@@ -52,16 +52,28 @@
 
 <a href="https://github.com/June-PJ">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=June-PJ&show_icons=true&hide_border=true&hide_title=true&include_all_commits=true&count_private=true&card_width=420&bg_color=00000000&icon_color=F2B94B&text_color=C4C4D0&title_color=F2B94B" />
-  <img height="160" alt="June's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=June-PJ&show_icons=true&hide_border=true&hide_title=true&include_all_commits=true&count_private=true&card_width=420&bg_color=00000000&icon_color=E68282&text_color=475569&title_color=E68282" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=June-PJ&show_icons=true&hide_border=true&hide_title=true&include_all_commits=true&count_private=true&card_width=420&cache_seconds=14400&disable_animations=true&bg_color=00000000&icon_color=F2B94B&text_color=C4C4D0&title_color=F2B94B" />
+  <img height="160" alt="June's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=June-PJ&show_icons=true&hide_border=true&hide_title=true&include_all_commits=true&count_private=true&card_width=420&cache_seconds=14400&disable_animations=true&bg_color=00000000&icon_color=E68282&text_color=475569&title_color=E68282" />
 </picture>
 </a>
 <a href="https://github.com/June-PJ">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=June-PJ&layout=compact&hide_border=true&hide_title=true&langs_count=6&card_width=320&bg_color=00000000&text_color=C4C4D0&title_color=F2B94B" />
-  <img height="160" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=June-PJ&layout=compact&hide_border=true&hide_title=true&langs_count=6&card_width=320&bg_color=00000000&text_color=475569&title_color=E68282" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=June-PJ&layout=compact&hide_border=true&hide_title=true&langs_count=6&card_width=320&cache_seconds=14400&bg_color=00000000&text_color=C4C4D0&title_color=F2B94B" />
+  <img height="160" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=June-PJ&layout=compact&hide_border=true&hide_title=true&langs_count=6&card_width=320&cache_seconds=14400&bg_color=00000000&text_color=475569&title_color=E68282" />
 </picture>
 </a>
+
+### 足迹
+
+<div align="center">
+
+<!-- 贪吃蛇：吃格子动画，由 .github/workflows/snake.yml 生成到 output 分支 -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/June-PJ/June-PJ/output/github-snake-dark.svg" />
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/June-PJ/June-PJ/output/github-snake.svg" />
+</picture>
+
+</div>
 
 ### 最近博客
 
