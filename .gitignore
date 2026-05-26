@@ -3,3 +3,8 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# 临时文件
+.commitmsg.tmp
+*.ps1
+raw_commit.bin
