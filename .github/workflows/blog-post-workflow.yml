@@ -27,6 +27,7 @@ jobs:
           feed_list: "https://blog.june-pj.cn/atom.xml"
           max_post_count: 5
           # 每行格式：- `日期` · [标题](链接)
+          # 注意：date_format 用的是 dateformat 包语法，月份是小写 mm，大写 MM 是分钟
           template: "- `$date` · [$title]($url)"
-          date_format: "yyyy-MM-dd"
+          date_format: "yyyy-mm-dd"
           commit_message: "chore: update latest blog posts"
