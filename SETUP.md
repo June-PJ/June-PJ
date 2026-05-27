@@ -100,19 +100,12 @@ git push -u origin main
 
 ### 数据卡 / 贪吃蛇配色
 
-所有 SVG 资源都在 `.github/workflows/generate-assets.yml` 里生成。配色按双主题区分：
+| 资源 | 配色来源 |
+|---|---|
+| stats / top-langs（自己生成） | `.github/scripts/generate_stats.py` 里 `theme_colors()` 函数，浅色 `E68282 / 475569`，深色 `F2B94B / C4C4D0` |
+| 贪吃蛇（Platane/snk） | `palette=github-light` / `palette=github-dark` 预设（绿色，跟 GitHub 贡献图自身一致） |
 
-| 资源 | 浅色 | 深色 |
-|---|---|---|
-| stats / top-langs 强调色 | `E68282` | `F2B94B` |
-| stats / top-langs 文字色 | `475569` | `C4C4D0` |
-| 背景 | `00000000`（透明） | `00000000`（透明） |
-| 贪吃蛇蛇身 | `#E68282` | `#F2B94B` |
-| 贪吃蛇格子（0~4） | `#E5E7EB → #D86060` | `#2E2E36 → #F2B94B` |
-
-GitHub 按访客系统主题自动加载对应文件（`*-dark.svg` 用 `prefers-color-scheme: dark`）。
-
-**注意：贪吃蛇颜色参数必须带 `#` 前缀（按 [Platane/snk 官方文档](https://github.com/Platane/snk) 字面量用 `#`，不是 `%23`），否则解析失败 fallback 成黑色。**
+**为什么贪吃蛇不自定义颜色**：尝试过 `color_snake=#E68282` 和 `color_snake=%23E68282` 两种写法都没生效（snk v3 的 GitHub Actions 实际加载产物跟 README 文档脱节）。改用官方 palette 预设最稳。
 
 ### 博客同步频率
 

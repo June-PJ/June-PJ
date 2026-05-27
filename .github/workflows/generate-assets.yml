@@ -43,14 +43,16 @@ jobs:
         run: python .github/scripts/generate_stats.py
 
       # ---------- 贪吃蛇 ----------
+      # 用官方 palette 预设：github（浅色，绿色调）/ github-dark（深色，绿色调）
+      # 之前尝试 color_snake / color_dots 自定义颜色都失败（v3 svg-only 解析 query
+      # string 但 GitHub Actions 实际加载的版本可能不是 main 分支编译产物）
       - name: Generate snake SVG
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: June-PJ
-          # 颜色按 Platane/snk 官方文档字面量用 #：浅色 #E68282，深色 #F2B94B
           outputs: |
-            dist/github-snake.svg?color_snake=#E68282&color_dots=#E5E7EB,#F8C5C5,#EFA5A5,#E68282,#D86060
-            dist/github-snake-dark.svg?color_snake=#F2B94B&color_dots=#2E2E36,#5E4F2A,#8A7330,#B89640,#F2B94B
+            dist/github-snake.svg?palette=github-light
+            dist/github-snake-dark.svg?palette=github-dark
 
       - name: List generated files
         run: ls -la dist/
