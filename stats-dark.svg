@@ -1,0 +1,22 @@
+<svg width="420" height="220" viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <text x="20" y="32" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="16" font-weight="700" fill="#F2B94B">June's GitHub Stats</text>
+  <line x1="20" y1="44" x2="400" y2="44" stroke="#94A3B8" stroke-opacity="0.25"/>
+  <text x="22" y="74" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="14" fill="#F2B94B">★</text>
+  <text x="44" y="74" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" fill="#C4C4D0">Total Stars Earned</text>
+  <text x="398" y="74" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" font-weight="700" fill="#F2B94B" text-anchor="end">0</text>
+  <text x="22" y="96" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="14" fill="#F2B94B">↗</text>
+  <text x="44" y="96" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" fill="#C4C4D0">Total Commits (last yr)</text>
+  <text x="398" y="96" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" font-weight="700" fill="#F2B94B" text-anchor="end">13</text>
+  <text x="22" y="118" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="14" fill="#F2B94B">⤴</text>
+  <text x="44" y="118" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" fill="#C4C4D0">Total PRs</text>
+  <text x="398" y="118" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" font-weight="700" fill="#F2B94B" text-anchor="end">4</text>
+  <text x="22" y="140" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="14" fill="#F2B94B">○</text>
+  <text x="44" y="140" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" fill="#C4C4D0">Total Issues</text>
+  <text x="398" y="140" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" font-weight="700" fill="#F2B94B" text-anchor="end">0</text>
+  <text x="22" y="162" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="14" fill="#F2B94B">♥</text>
+  <text x="44" y="162" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" fill="#C4C4D0">Followers</text>
+  <text x="398" y="162" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" font-weight="700" fill="#F2B94B" text-anchor="end">0</text>
+  <text x="22" y="184" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="14" fill="#F2B94B">▣</text>
+  <text x="44" y="184" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" fill="#C4C4D0">Public Repos</text>
+  <text x="398" y="184" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" font-weight="700" fill="#F2B94B" text-anchor="end">2</text>
+</svg>

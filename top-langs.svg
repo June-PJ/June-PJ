@@ -1,0 +1,5 @@
+<svg width="380" height="200" viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <text x="20" y="32" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="16" font-weight="700" fill="#E68282">Most Used Languages</text>
+  <line x1="20" y1="44" x2="360" y2="44" stroke="#94A3B8" stroke-opacity="0.25"/>
+  <text x="20" y="100" font-family="-apple-system,Segoe UI,Microsoft YaHei,Ubuntu,sans-serif" font-size="13" fill="#475569" fill-opacity="0.7">No owned non-fork repos with code yet.</text>
+</svg>
