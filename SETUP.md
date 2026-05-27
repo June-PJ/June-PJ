@@ -34,36 +34,25 @@ git push -u origin main
 仓库 → **Settings** → **Actions** → **General**：
 
 1. **Actions permissions**：选 `Allow all actions and reusable workflows`
-2. **Workflow permissions**：选 **Read and write permissions**（必须，否则 Action 无法 commit README / 创建 output 分支，会报 403）
+2. **Workflow permissions**：选 **Read and write permissions**（必须，否则 Action 无法 commit README，会报 403）
 3. 保存
 
-然后去 **Actions** 标签页手动各跑一次：
+然后去 **Actions** 标签页：
 
-| Workflow | 作用 | 频率 |
+| Workflow | 作用 | 触发 |
 |---|---|---|
-| `Latest blog post workflow` | 同步 atom.xml 最近 5 篇到 README（main 分支） | 每 6 小时 |
-| `Generate README Assets` | 在 GitHub 美国机房预生成所有 SVG 资源到 `output` 分支 | 每天 0 点（UTC）|
+| `Latest blog post workflow` | 同步 atom.xml 最近 5 篇到 README（main 分支） | 每 6 小时自动 + 可手动 |
+| `Generate README Assets` | 生成 stats / top-langs / 贪吃蛇 SVG 到 `output` 分支 | **仅手动**触发 |
 
-### 为什么要 `Generate README Assets`
+第一个 workflow 手动跑一次（让博客列表立刻出来），之后不用管。
 
-`*.vercel.app` 在国内**根本访问不通**（HTTP 000，TCP 连接被重置）。GitHub README 上的图虽然走 camo 代理，但 camo 缓存不稳，国内访客经常看到破图。即使在 GitHub Action runner（美国机房）上 curl `github-readme-stats.vercel.app` 也会拿到 503——这个免费实例长期被 GitHub IP 限流。
+第二个 workflow 当前 README 里数据 / 足迹两块是注释隐藏状态（仓库 commits / repos 太少撑不起场面），所以不需要触发。等数据多起来想展示时：
 
-解决方案：
-
-| 资源 | 生成方式 |
-|---|---|
-| stats.svg / top-langs.svg | Python 脚本直接调 GitHub GraphQL API 自己拼 SVG，**完全脱离 vercel** |
-| github-snake.svg | `Platane/snk` 官方 action（不依赖 vercel） |
-
-所有资源推到 `output` 分支，README 通过 `raw.githubusercontent.com` 引用 → 国内访问稳定。
-
-第一次跑 `Generate README Assets` 后，`output` 分支会有 6 个 SVG：
-
-- `stats.svg` / `stats-dark.svg`
-- `top-langs.svg` / `top-langs-dark.svg`
-- `github-snake.svg` / `github-snake-dark.svg`
-
-**没跑之前所有数据卡 + 贪吃蛇都会破图，正常现象。**
+1. 打开 `README.md`
+2. 找到 `<!-- 暂时藏起来：...` 这段 HTML 注释
+3. 把注释开始 `<!--` 和结束 `-->` 两行删掉，保留中间内容
+4. 去 Actions 手动触发 `Generate README Assets`，等 1 分钟生成完
+5. push 改动，刷新 README
 
 ## 四、设计取舍
 

@@ -16,7 +16,7 @@
 </picture>
 
 <p>
-  <sub><i>Java Backend Developer · Hexo &amp; Butterfly Tinkerer</i></sub>
+  <sub><i>Java Backend Developer</i></sub>
   <br />
   <sub><i>「遇事不决，可问春风。」</i></sub>
 </p>
@@ -40,13 +40,18 @@
 
 ### 关于
 
-平时写 Java 后端、折腾 Hexo 主题、记技术笔记，散落在 [blog.june-pj.cn](https://blog.june-pj.cn)。
+平时写 Java 后端、记技术笔记，散落在 [blog.june-pj.cn](https://blog.june-pj.cn)。
 
 ### 技术栈
 
 `Java` · `Spring` · `Spring Boot` · `MySQL` · `Redis` · `Linux`
 
 `Hexo` · `Node.js` · `JavaScript` · `Vercel` · `GitHub Actions`
+
+<!--
+  暂时藏起来：仓库 commits / repos / 贡献还没起来，stats 卡和贪吃蛇撑不起场面。
+  等数据多起来再把下面整段恢复。所有 SVG 资源由 .github/workflows/generate-assets.yml
+  生成在 output 分支，恢复时不需要改 workflow，直接把这段 HTML 注释拆开即可。
 
 ### 数据
 
@@ -66,19 +71,18 @@
 ### 足迹
 
 <div align="center">
-
-<!-- 贪吃蛇：吃格子动画，由 .github/workflows/generate-assets.yml 生成到 output 分支 -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/June-PJ/June-PJ/output/github-snake-dark.svg" />
   <img alt="Snake animation" src="https://raw.githubusercontent.com/June-PJ/June-PJ/output/github-snake.svg" />
 </picture>
-
 </div>
+-->
 
 ### 最近博客
 
 <!-- 由 GitHub Actions 每 6 小时自动从 https://blog.june-pj.cn/atom.xml 同步最近 5 篇 -->
-<!-- BLOG-POST-LIST:START -->- `2026-05-08` · [Docker 容器化 aTrust 绕过企业 DLP 管控方案](https://blog.june-pj.cn/posts/b8f3d721/)- `2026-05-05` · [Butterfly 404页面美化](https://blog.june-pj.cn/posts/15a35a53/)- `2026-04-27` · [Butterfly首页轮播图Swiper（源码版）](https://blog.june-pj.cn/posts/811bada5/)- `2026-04-25` · [DataX 同步 StarRocks VARCHAR 超长导致数据丢失](https://blog.june-pj.cn/posts/c7d2e519/)- `2026-04-23` · [GraalVM 反射参数名丢失导致 Controller 500](https://blog.june-pj.cn/posts/a3e8f142/)<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
 <p align="right"><a href="https://blog.june-pj.cn/archives/">全部归档 →</a></p>
 
