@@ -28,11 +28,6 @@
 <a href="https://june-pj.cn"><img alt="Portal" src="https://img.shields.io/badge/Portal-june--pj.cn-475569?style=flat-square&logo=vercel&logoColor=white" /></a>
 &nbsp;
 <a href="mailto:1687434191@qq.com"><img alt="Email" src="https://img.shields.io/badge/Email-1687434191@qq.com-475569?style=flat-square&logo=maildotru&logoColor=white" /></a>
-&nbsp;
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://komarev.com/ghpvc/?username=June-PJ&label=Profile%20Views&color=f2b94b&style=flat-square" />
-  <img alt="Profile Views" src="https://komarev.com/ghpvc/?username=June-PJ&label=Profile%20Views&color=e68282&style=flat-square" />
-</picture>
 
 </div>
 
@@ -44,7 +39,16 @@
 
 ### 技术栈
 
-`Java` · `Spring` · `Spring Cloud` · `MySQL` · `Redis` · `Linux` · `ES` · `Docker`
+<p>
+  <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img alt="Spring" src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
+  <img alt="Spring Cloud" src="https://img.shields.io/badge/Spring%20Cloud-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img alt="Redis" src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
+  <img alt="Elasticsearch" src="https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white" />
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+</p>
 
 <!--
   暂时藏起来：仓库 commits / repos / 贡献还没起来，stats 卡和贪吃蛇撑不起场面。
