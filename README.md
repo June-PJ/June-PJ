@@ -11,8 +11,8 @@
 
 <!-- 视觉锚点：仅一个打字机标题，纯英文避免 URL 编码炸图 -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=34&duration=3000&pause=1200&color=F2B94B&center=true&vCenter=true&width=620&height=64&lines=Hi+there%2C+I'm+June." />
-  <img alt="Hi, I'm June. 👋" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=34&duration=3000&pause=1200&color=E68282&center=true&vCenter=true&width=620&height=64&lines=Hi+there%2C+I'm+June." />
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=34&duration=3000&pause=1200&color=F2B94B&center=true&vCenter=true&width=620&height=64&lines=Hi%2C+I'm+June.+%F0%9F%91%8B" />
+  <img alt="Hi, I'm June. 👋" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=34&duration=3000&pause=1200&color=E68282&center=true&vCenter=true&width=620&height=64&lines=Hi%2C+I'm+June.+%F0%9F%91%8B" />
 </picture>
 
 <p>
@@ -40,14 +40,21 @@
 ### 技术栈
 
 <p>
-  <img alt="Java" src="https://img.shields.io/badge/Java-1F2937?style=flat-square&logo=openjdk&logoColor=E68282" />
-  <img alt="Spring" src="https://img.shields.io/badge/Spring-1F2937?style=flat-square&logo=spring&logoColor=E68282" />
-  <img alt="Spring Cloud" src="https://img.shields.io/badge/Spring%20Cloud-1F2937?style=flat-square&logo=spring&logoColor=E68282" />
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-1F2937?style=flat-square&logo=mysql&logoColor=E68282" />
-  <img alt="Redis" src="https://img.shields.io/badge/Redis-1F2937?style=flat-square&logo=redis&logoColor=E68282" />
-  <img alt="Elasticsearch" src="https://img.shields.io/badge/Elasticsearch-1F2937?style=flat-square&logo=elasticsearch&logoColor=E68282" />
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-1F2937?style=flat-square&logo=docker&logoColor=E68282" />
-  <img alt="Linux" src="https://img.shields.io/badge/Linux-1F2937?style=flat-square&logo=linux&logoColor=E68282" />
+  <img alt="Java" height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" />
+  &nbsp;&nbsp;
+  <img alt="Spring" height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" />
+  &nbsp;&nbsp;
+  <img alt="MySQL" height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" />
+  &nbsp;&nbsp;
+  <img alt="Redis" height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg" />
+  &nbsp;&nbsp;
+  <img alt="Elasticsearch" height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg" />
+  &nbsp;&nbsp;
+  <img alt="Docker" height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" />
+  &nbsp;&nbsp;
+  <img alt="Linux" height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" />
+  &nbsp;&nbsp;
+  <img alt="Git" height="38" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" />
 </p>
 
 <!--
