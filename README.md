@@ -23,9 +23,9 @@
 
 <br />
 
-<a href="https://blog.june-pj.cn"><img alt="Blog" src="https://img.shields.io/badge/Blog-blog.june--pj.cn-475569?style=flat-square&logo=hexo&logoColor=white" /></a>
-&nbsp;
 <a href="https://june-pj.cn"><img alt="Portal" src="https://img.shields.io/badge/Portal-june--pj.cn-475569?style=flat-square&logo=vercel&logoColor=white" /></a>
+&nbsp;
+<a href="https://blog.june-pj.cn"><img alt="Blog" src="https://img.shields.io/badge/Blog-blog.june--pj.cn-475569?style=flat-square&logo=hexo&logoColor=white" /></a>
 &nbsp;
 <a href="mailto:1687434191@qq.com"><img alt="Email" src="https://img.shields.io/badge/Email-1687434191@qq.com-475569?style=flat-square&logo=maildotru&logoColor=white" /></a>
 
@@ -40,14 +40,14 @@
 ### 技术栈
 
 <p>
-  <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
-  <img alt="Spring" src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
-  <img alt="Spring Cloud" src="https://img.shields.io/badge/Spring%20Cloud-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img alt="Redis" src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-  <img alt="Elasticsearch" src="https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white" />
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img alt="Java" src="https://img.shields.io/badge/Java-1F2937?style=flat-square&logo=openjdk&logoColor=E68282" />
+  <img alt="Spring" src="https://img.shields.io/badge/Spring-1F2937?style=flat-square&logo=spring&logoColor=E68282" />
+  <img alt="Spring Cloud" src="https://img.shields.io/badge/Spring%20Cloud-1F2937?style=flat-square&logo=spring&logoColor=E68282" />
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-1F2937?style=flat-square&logo=mysql&logoColor=E68282" />
+  <img alt="Redis" src="https://img.shields.io/badge/Redis-1F2937?style=flat-square&logo=redis&logoColor=E68282" />
+  <img alt="Elasticsearch" src="https://img.shields.io/badge/Elasticsearch-1F2937?style=flat-square&logo=elasticsearch&logoColor=E68282" />
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-1F2937?style=flat-square&logo=docker&logoColor=E68282" />
+  <img alt="Linux" src="https://img.shields.io/badge/Linux-1F2937?style=flat-square&logo=linux&logoColor=E68282" />
 </p>
 
 <!--
