@@ -81,7 +81,11 @@
 ### 最近博客
 
 <!-- 由 GitHub Actions 每 6 小时自动从 https://blog.june-pj.cn/atom.xml 同步最近 5 篇 -->
-<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:START -->- `2026-05-08` · [Docker 容器化 aTrust 绕过企业 DLP 管控方案](https://blog.june-pj.cn/posts/b8f3d721/)
+- `2026-05-05` · [Butterfly 404页面美化](https://blog.june-pj.cn/posts/15a35a53/)
+- `2026-04-27` · [Butterfly首页轮播图Swiper（源码版）](https://blog.june-pj.cn/posts/811bada5/)
+- `2026-04-25` · [DataX 同步 StarRocks VARCHAR 超长导致数据丢失](https://blog.june-pj.cn/posts/c7d2e519/)
+- `2026-04-23` · [GraalVM 反射参数名丢失导致 Controller 500](https://blog.june-pj.cn/posts/a3e8f142/)
 <!-- BLOG-POST-LIST:END -->
 
 <p align="right"><a href="https://blog.june-pj.cn/archives/">全部归档 →</a></p>
