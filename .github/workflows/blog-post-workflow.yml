@@ -26,8 +26,12 @@ jobs:
         with:
           feed_list: "https://blog.june-pj.cn/atom.xml"
           max_post_count: 5
-          # 每行格式：- `日期` · [标题](链接)，末尾 $newline 强制换行
-          # 注意：date_format 用的是 dateformat 包语法，月份是小写 mm，大写 MM 是分钟
+          # 每行格式：- `日期` · [标题](链接)
+          # 注意 1：date_format 用 dateformat 包语法，月份是小写 mm，大写 MM 是分钟
+          # 注意 2：用 template 时 tag_post_pre_newline 默认 false，第一条会粘在
+          # <!-- BLOG-POST-LIST:START --> 同一行渲染失败，必须显式 true
+          # 注意 3：模板末尾的 $newline 控制条目之间换行
           template: "- `$date` · [$title]($url)$newline"
           date_format: "yyyy-mm-dd"
+          tag_post_pre_newline: true
           commit_message: "chore: update latest blog posts"

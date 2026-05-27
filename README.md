@@ -12,7 +12,7 @@
 <!-- 视觉锚点：仅一个打字机标题，纯英文避免 URL 编码炸图 -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=34&duration=3000&pause=1200&color=F2B94B&center=true&vCenter=true&width=620&height=64&lines=Hi+there%2C+I'm+June." />
-  <img alt="Hi there, I'm June." src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=34&duration=3000&pause=1200&color=E68282&center=true&vCenter=true&width=620&height=64&lines=Hi+there%2C+I'm+June." />
+  <img alt="Hi, I'm June. 👋" src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=34&duration=3000&pause=1200&color=E68282&center=true&vCenter=true&width=620&height=64&lines=Hi+there%2C+I'm+June." />
 </picture>
 
 <p>
@@ -44,9 +44,7 @@
 
 ### 技术栈
 
-`Java` · `Spring` · `Spring Boot` · `MySQL` · `Redis` · `Linux`
-
-`Hexo` · `Node.js` · `JavaScript` · `Vercel` · `GitHub Actions`
+`Java` · `Spring` · `Spring Cloud` · `MySQL` · `Redis` · `Linux` · `ES` · `Docker`
 
 <!--
   暂时藏起来：仓库 commits / repos / 贡献还没起来，stats 卡和贪吃蛇撑不起场面。
@@ -93,5 +91,5 @@
 ---
 
 <div align="center">
-  <sub>© June · <a href="https://blog.june-pj.cn">Blog</a> · <a href="https://june-pj.cn">Portal</a></sub>
+  <sub>© June · <a href="https://june-pj.cn">Portal</a> · <a href="https://blog.june-pj.cn">Blog</a></sub>
 </div>
